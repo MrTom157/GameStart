@@ -19,7 +19,6 @@
 }
 
 body{
-
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: var(--color-fondo);
     color: var(--color-texto);
@@ -29,6 +28,14 @@ body{
 a{ 
     color: var(--color-primario); 
     text-decoration: none; 
+}
+a:hover{
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 .header{
@@ -50,31 +57,22 @@ a{
     gap: 12px;
 }
 
+
 .nav-menu{
     list-style: none;
     display: flex;
     gap: 18px;
     flex-wrap: wrap;
 }
-
 .nav-menu a{
     color: var(--color-claro);
-}
-
-
-.btn-principal{
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 24px;
-    color: var(--color-claro);
-    text-decoration: underline;
 }
 
 main{
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
-    min-width: 70vh;
+    min-height: 70vh;
 }
 
 .seccion-titulo{
@@ -90,6 +88,20 @@ main{
     border-radius: var(--radio);
     text-align: center;
     margin-bottom: 30px;
+}
+.home h1{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+.home p{
+    font-size: 1.1rem;
+}
+
+.btn-principal{
+    display: inline-block;
+    margin-top: 16px;
+    padding: 10px 24px;
+    color: var(--color-claro);
 }
 
 .footer{
