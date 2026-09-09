@@ -31,6 +31,10 @@ a{
     text-decoration: none; 
 }
 
+.texto-admin{
+    color:#e6435c 
+}
+
 .header{
     background: var(--color-texto);
     box-shadow: var(--sombra);

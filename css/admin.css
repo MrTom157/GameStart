@@ -1,0 +1,26 @@
+body{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(#f5f5f5);
+    color: var(#222);
+    line-height: 1.5;
+}
+
+.header{
+    background: #222;
+    color: aliceblue;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    top: 0x;
+    font-size: 15px;
+}
+
+.nav-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
