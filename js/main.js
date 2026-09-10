@@ -1,3 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    actua
-})
+    actualizarContadorCarrito();
+    renderProductos();
+    renderDetalleProducto();
+    renderCarrito();
+
+    cargarComunas();
+});

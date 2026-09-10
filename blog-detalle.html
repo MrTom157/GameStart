@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle Blog - LevelUp Gamer</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="nav-container">
+            <a href="index.html">GameStart</a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="login.html">Iniciar Sesion</a></li>
+                <li><a href="admin/index.html">Admin</a></li>
+            </ul>
+            <a href="carrito.html">
+                Carrito <span id="carrito-contador"></span>
+            </a>
+        </nav>
+    </header>
+  <main>
+    <article id="blog-detalle" class="formulario">
+    </article>
+    <p>
+      <a href="blogs.html">← Volver a blogs</a>
+    </p>
+  </main>
+
+    <footer class="footer">
+        <p>© 2026 GameStart - Todos los derechos reservados</p>
+        <p><a href="contacto.html">Contacto</a> | <a href="nosotros.html">Nosotros</a></p>
+    </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/regions.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/validations.js"></script>
+  <script>
+    // Los blogs viven en un objeto JS; se elige por ?id=
+    const BLOGS = {
+      "1": {
+        titulo: "Cómo elegir tu primer mouse gaming",
+        imagen: "",
+        descripcionLarga: "Elegir tu primer mouse gaming puede parecer complicado: DPI, polling rate, switches, peso... En este artículo te explicamos cada característica en lenguaje simple. Un buen mouse gaming no es el más caro, es el que se adapta a tu mano, tu estilo de juego y tu sensibilidad. Considera el tamaño de tu mano, si juegas con palma, claw o fingertip, y el tipo de juegos que prefieres. Para FPS competitivos, los sensores ópticos con 16.000 DPI y polling rate de 1000Hz son el estándar. Para MOBAs o juegos casuales, basta con un sensor decente y buena ergonomía."
+      },
+      "2": {
+        titulo: "Switches mecánicos: rojos, azules o marrones",
+        imagen: "",
+        descripcionLarga: "Los switches mecánicos definen cómo se siente tu teclado. Los rojos son lineales, suaves y silenciosos, ideales para gamers. Los azules son táctiles con clic audible, preferidos por mecanógrafos. Los marrones son un punto medio: tactiles pero sin clic, buenos para escribir y jugar. También existen otras marcas como Gateron, Kailh y los switches ópticos de Razer. Si vas a comprar tu primer teclado mecánico, los marrones son la apuesta más segura. Si juegas competitivo y no te molesta el ruido, los rojos son tu mejor opción."
+      }
+    };
+
+    document.addEventListener("DOMContentLoaded", () => {
+      actualizarContadorCarrito();
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id") || "1";
+      const blog = BLOGS[id] || BLOGS["1"];
+      const cont = document.getElementById("blog-detalle");
+      cont.innerHTML = `
+        <div class="blog-imagen" style="height:240px; font-size:5rem; border-radius:6px; margin-bottom:20px;">${blog.imagen}</div>
+        <h1>${blog.titulo}</h1>
+        <p style="margin-top:14px; line-height:1.7;">${blog.descripcionLarga}</p>`;
+    });
+  </script>
+    <script src="js/productos.js"></script>
+    <script src="js/regiones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

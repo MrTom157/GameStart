@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registro - GameStart</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -25,9 +25,73 @@
             </a>
         </nav>
     </header>
+    <main>
+    <form class="formulario" id="form-registro" onsubmit="return validarRegistro(this)">
+      <h1>Crear cuenta</h1>
+
+      <div class="campo">
+        <label for="run">RUN (sin puntos ni guion)</label>
+        <input type="text" id="run" name="run" placeholder="19011022K" >
+        <div class="mensaje-error" id="error-reg-run"></div>
+      </div>
+
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" maxlength="50" >
+        <div class="mensaje-error" id="error-reg-nombre"></div>
+      </div>
+
+      <div class="campo">
+        <label for="apellidos">Apellidos</label>
+        <input type="text" id="apellidos" name="apellidos" maxlength="100" >
+        <div class="mensaje-error" id="error-reg-apellidos"></div>
+      </div>
+
+      <div class="campo">
+        <label for="correo">Correo</label>
+        <input type="email" id="correo" name="correo" placeholder="usuario@duoc.cl" >
+        <div class="mensaje-error" id="error-reg-correo"></div>
+      </div>
+
+      <div class="campo">
+        <label for="password">Contraseña (4 a 10 caracteres)</label>
+        <input type="text" id="password" name="password">
+        <div class="mensaje-error" id="error-reg-password"></div>
+      </div>
+
+      <div class="campo">
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" maxlength="300" >
+        <div class="mensaje-error" id="error-reg-direccion"></div>
+      </div>
+
+      <div class="campo">
+        <label for="region">Región</label>
+        <select id="region" name="region" onchange="cargarComunas()">
+          <option value="">Selecciona región</option>
+        </select>
+        <div class="mensaje-error" id="error-reg-region"></div>
+      </div>
+
+      <div class="campo">
+        <label for="comuna">Comuna</label>
+        <select id="comuna" name="comuna">
+          <option value="">Selecciona comuna</option>
+        </select>
+        <div class="mensaje-error" id="error-reg-comuna"></div>
+      </div>
+
+      <button type="submit" class="btn-form">Registrarme</button>
+    </form>
+  </main>
     <footer class="footer">
         <p>© 2026 GameStart - Todos los derechos reservados</p>
         <p><a href="contacto.html">Contacto</a> | <a href="nosotros.html">Nosotros</a></p>
     </footer>
+    <script src="js/productos.js"></script>
+    <script src="js/regiones.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/validaciones.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

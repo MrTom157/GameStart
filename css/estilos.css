@@ -263,3 +263,120 @@ main{
 .btn-form:hover{
     background: #1873cc;
 }
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.producto-card {
+  background: var(--color-claro);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.producto-card:hover { transform: translateY(-4px); }
+
+.producto-imagen {
+  width: 100%;
+  height: 160px;
+  background: var(--color-fondo);
+  border-radius: var(--radio);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  color: var(--color-primario);
+}
+
+.producto-card h3 { font-size: 1rem; margin-bottom: 6px; }
+.producto-card .precio {
+  color: var(--color-secundario);
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.producto-card a, .producto-card button {
+  display: inline-block;
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: none;
+  border-radius: var(--radio);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-secundario {
+  background: var(--color-secundario);
+  color: var(--color-claro);
+}
+.btn-secundario:hover { background: #e55a2b; }
+
+.btn-peligro {
+  background: var(--color-error);
+  color: var(--color-claro);
+}
+
+.detalle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background: var(--color-claro);
+  padding: 30px;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.detalle-grid .producto-imagen { height: 320px; font-size: 6rem; }
+.detalle-info h1 { margin-bottom: 10px; }
+.detalle-info .precio-grande {
+  color: var(--color-secundario);
+  font-size: 2rem;
+  margin: 16px 0;
+  font-weight: bold;
+}
+
+/* ---------- Carrito ---------- */
+.carrito-tabla {
+  width: 100%;
+  background: var(--color-claro);
+  border-radius: var(--radio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  border-collapse: collapse;
+}
+
+.carrito-tabla th,
+.carrito-tabla td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.carrito-tabla th {
+  background: var(--color-primario);
+  color: var(--color-claro);
+}
+
+.carrito-total {
+  text-align: right;
+  margin-top: 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.carrito-vacio {
+  text-align: center;
+  padding: 40px;
+  background: var(--color-claro);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
